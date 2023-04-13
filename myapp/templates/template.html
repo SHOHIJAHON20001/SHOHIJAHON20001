@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 2px solid black;
+  
+}
+</style>
+</head><center>
+<body style="background-color: azure;">
+
+
+<h1>Sotib olingan mahsulotlar</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Mahsulot nomi</th>
+      <th>Soni</th>
+      <th>Narxi</th>
+      <th>Umumiy summa</th>
+      <th>Sana</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for product in products %}
+    <tr>
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.count }}</td>
+      <td>{{ product.narx }}</td>
+      <td>{{ product.all_price }}</td>
+      <td>{{ product.date }}</td>
+    </tr>
+    {% endfor %}
+    </tr>
+  </tfoot>
+</table>
+
+</body></center>
+</html>
